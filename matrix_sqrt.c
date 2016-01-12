@@ -19,7 +19,7 @@ void				**matrix_sqrt(unsigned int x, unsigned int y)
 
 	i = 0;
 	tmp = (void**)malloc(sizeof(void**) * y);
-	while (++i < y)
+	while (i < y)
 		tmp[i++] = (void*)malloc(sizeof(void*) * x);
 	return (tmp);
 }
