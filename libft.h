@@ -46,12 +46,14 @@ void				ft_memdel(void **as);
 void				*ft_memmove(void *dest, void const *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_putchar(char c);
+void				ft_putchar_err(char c);
 void				ft_putchar_fd(char c, int fd);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(int n);
 void				ft_putnbr_fd(int n, int fd);
 void				ft_putstr(char const *s);
+void				ft_putstr_err(char *str);
 void				ft_putstr_fd(char const *s, int fd);
 char				*ft_strchr(char const *s, int c);
 char				*ft_strcat(char *dest, char const *src);
@@ -82,5 +84,6 @@ char				*ft_strtrim(char const *s);
 int					ft_tolower(int c);
 int					ft_toupper(int c);
 void				**matrix_sqrt(unsigned int x, unsigned int y);
+void				matrix_sqrt_free(void **map, size_t n);
 
 #endif
