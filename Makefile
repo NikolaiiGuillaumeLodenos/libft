@@ -6,7 +6,7 @@
 #    By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#              #
-#    Updated: 2100/01/01 00:00:00 by glodenos         ###   ########.fr        #
+#    Updated: 2016/02/15 12:46:19 by glodenos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,6 +48,7 @@ SRC		=	src/ft_atoi.c			\
 			src/ft_putstr.c			\
 			src/ft_putstr_err.c		\
 			src/ft_putstr_fd.c		\
+			src/ft_realloc.c		\
 			src/ft_strchr.c			\
 			src/ft_strcat.c			\
 			src/ft_strclr.c			\
@@ -82,6 +83,11 @@ SRC		=	src/ft_atoi.c			\
 all: $(NAME)
 
 $(NAME):
+	@printf ".____    .___________________________________\n"
+	@printf "|    |   |   \______   \_   _____/\__    ___/\n"
+	@printf "|    |   |   ||    |  _/|    __)    |    |   \n"
+	@printf "|    |___|   ||    |   \|     \     |    |   \n"
+	@printf "|________\___||________/\_____/     |____|   \n"         
 	@gcc -c $(SRC) $(HEAD)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
