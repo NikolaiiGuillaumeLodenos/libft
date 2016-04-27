@@ -6,15 +6,21 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/02/15 12:20:07 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/04/27 13:14:57 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# include <fcntl.h>
 # include <stdio.h>
 # include <stdlib.h>
+# include <sys/stat.h>
+# include <sys/types.h>
 # include <unistd.h>
+# define BUFF_SIZE 60
+# define MAX_FD	255
+# define MIN_FD 0
 
 typedef struct		s_list
 {
