@@ -6,7 +6,7 @@
 #    By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#              #
-#    Updated: 2016/02/15 12:46:19 by glodenos         ###   ########.fr        #
+#    Updated: 2016/05/07 19:52:23 by glodenos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,17 +77,20 @@ SRC		=	src/ft_atoi.c			\
 			src/ft_strtrim.c		\
 			src/ft_tolower.c		\
 			src/ft_toupper.c		\
+			src/get_next_line.c		\
 			src/matrix_sqrt.c		\
 			src/matrix_sqrt_free.c
 
 all: $(NAME)
 
 $(NAME):
-	@printf ".____    .___________________________________\n"
-	@printf "|    |   |   \______   \_   _____/\__    ___/\n"
-	@printf "|    |   |   ||    |  _/|    __)    |    |   \n"
-	@printf "|    |___|   ||    |   \|     \     |    |   \n"
-	@printf "|________\___||________/\_____/     |____|   \n"         
+	@echo "      libft @ glodenos project 42 - 2016     "
+	@echo ".____    .___________________________________"
+	@echo "|    |   |   \______   \_   _____/\__    ___/"
+	@echo "|    |   |   ||    |  _/|    __)    |    |   "
+	@echo "|    |___|   ||    |   \|     \     |    |   "
+	@echo "|________\___||________/\_____/     |____|   "         
+	@echo "                                             "
 	@gcc -c $(SRC) $(HEAD)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
