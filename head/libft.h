@@ -6,7 +6,7 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/04/27 13:18:24 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/08/13 22:03:59 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ int					ft_memcmp(void const *s1, void const *s2, size_t n);
 void				ft_memdel(void **as);
 void				*ft_memmove(void *dest, void const *src, size_t n);
 void				*ft_memset(void *s, int c, size_t n);
+void				ft_print_tab(char **tab, char *str);
 void				ft_putchar(char c);
 void				ft_putchar_err(char c);
 void				ft_putchar_fd(char c, int fd);
