@@ -6,7 +6,7 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/01/06 01:09:57 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/02/26 23:49:21 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	int		i;
 
 	i = -1;
-	if ((tmp = (char*)malloc(sizeof(tmp) * ft_strlen(s))) == NULL)
-		return (NULL);
+	if (!(tmp = (char*)ft_memalloc(ft_strlen(s) + 1)))
+		return (tmp);
+	if (!s)
+		return (tmp);
 	while (s[++i])
 		tmp[i] = f(s[i]);
 	return (tmp);

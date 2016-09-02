@@ -6,7 +6,7 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2100/01/01 00:00:00 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/02 06:28:47 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int		ft_nb_of_words(char const *s, char c)
 			s++;
 		if (*s && *s != c)
 		{
-			i += 1;
+			++i;
 			while (*s && *s != c)
 				s++;
 		}
@@ -55,7 +55,7 @@ char			**ft_strsplit(char const *s, char c)
 	int			i;
 
 	nb_of_w = ft_nb_of_words(s, c);
-	if (!s || !(tab = (char **)malloc(sizeof(char *) * nb_of_w + 1)))
+	if (!s || !(tab = (char **)malloc(sizeof(char *) * (nb_of_w + 1))))
 		return (NULL);
 	i = -1;
 	while (*s)

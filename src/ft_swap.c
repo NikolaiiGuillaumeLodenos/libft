@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_tab.c                                     :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: glodenos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/13 21:59:22 by glodenos          #+#    #+#             */
-/*   Updated: 2016/08/13 22:04:05 by glodenos         ###   ########.fr       */
+/*   Created: 2016/02/27 22:46:58 by glodenos          #+#    #+#             */
+/*   Updated: 2016/02/27 22:54:54 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_print_tab(char **tab, char *str)
+void	ft_swap(int *a, int *b)
 {
-	int	i;
+	int	tmp;
 
-	i = -1;
-	while (tab[++i])
-	{
-		ft_putstr(tab[i]);
-		ft_putstr(str);
-	}
+	tmp = 0;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   matrix_sqrt_free.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: glodenos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/01/06 01:01:27 by glodenos         ###   ########.fr       */
+/*   Created: 2016/02/28 10:08:11 by glodenos          #+#    #+#             */
+/*   Updated: 2016/02/28 10:09:19 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		matrix_sqrt_free(char **map, size_t n)
+void	matrix_sqrt_free(char **map, size_t n)
 {
 	while (n--)
 		free(*(map++));

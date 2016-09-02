@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   matrix_sqrt.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
+/*   By: glodenos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2100/01/01 00:00:00 by glodenos         ###   ########.fr       */
+/*   Created: 2016/02/28 09:59:18 by glodenos          #+#    #+#             */
+/*   Updated: 2016/02/28 10:06:42 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,9 @@ void				**matrix_sqrt(unsigned int x, unsigned int y)
 	unsigned int	i;
 
 	i = 0;
-	tmp = (void**)malloc(sizeof(void**) * y);
+	if (!(tmp = (void**)malloc(sizeof(tmp) * y)))
+		return (tmp);
 	while (i < y)
-		tmp[i++] = (void*)malloc(sizeof(void*) * x);
+		tmp[i++] = (void*)ft_memalloc(x);
 	return (tmp);
 }

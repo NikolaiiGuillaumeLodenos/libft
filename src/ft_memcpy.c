@@ -6,13 +6,13 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/01/07 14:44:57 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/02/27 00:15:41 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, void const *src, size_t n)
+void				*ft_memcpy(void *dest, void const *src, size_t n)
 {
 	unsigned char	*tmp_dest;
 	unsigned char	*tmp_src;

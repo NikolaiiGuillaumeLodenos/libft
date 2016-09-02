@@ -6,7 +6,7 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2100/01/01 00:00:00 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/02 09:14:06 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 char		*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char	*tmp;
 	size_t	i;
+	char	*tmp;
 
-	i = 0;
-	if (ft_strlen(s) < start)
+	i = -1;
+	if (s == NULL || start > ft_strlen(s) ||
+		!(tmp = (char*)ft_memalloc(len + 1)))
 		return (NULL);
-	if ((tmp = (char*)malloc(sizeof(tmp) * len + 1)) == NULL)
-		return (NULL);
-	while (i < len && s[start])
-		tmp[i++] = s[start++];
+	while (++i < len && s[start] != '\0')
+		tmp[i] = s[start++];
 	tmp[i] = '\0';
 	return (tmp);
 }

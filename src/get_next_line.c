@@ -6,7 +6,7 @@
 /*   By: glodenos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/28 11:22:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/04/27 13:13:46 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/02 09:50:03 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ static int		get_read(int const fd, char **over)
 	int			i;
 	char		*tmp;
 
-	tmp = NULL;
 	i = 0;
 	if (!(tmp = ft_memalloc(BUFF_SIZE + 1)))
 		return (-1);
-	if (!(ft_memalloc(BUFF_SIZE + 1)))
-		return (-1);
 	if ((i = read(fd, tmp, BUFF_SIZE)) == -1)
+	{
+		free(tmp);
 		return (-1);
+	}
 	if (!over[fd])
 		over[fd] = ft_strdup(tmp);
 	else
@@ -66,6 +66,9 @@ int				get_next_line(int const fd, char **line)
 	while ((i = get_line_over(fd, over, line, k)) == -1)
 		k = get_read(fd, over);
 	if (!over[fd] && !k && !i)
+	{
+		free(over[fd]);
 		return (0);
+	}
 	return (1);
 }
