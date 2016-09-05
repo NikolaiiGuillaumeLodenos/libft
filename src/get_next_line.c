@@ -6,7 +6,7 @@
 /*   By: glodenos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/28 11:22:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/09/05 05:07:11 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/05 10:07:12 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ static int	get_read(int const fd, char **over)
 	else
 	{
 		swp = ft_strdup(over[fd]);
+		free(over[fd]);
 		over[fd] = ft_strjoin(swp, tmp);
 		free(swp);
 	}
