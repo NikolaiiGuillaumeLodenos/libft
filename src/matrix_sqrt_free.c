@@ -6,7 +6,7 @@
 /*   By: glodenos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/28 10:08:11 by glodenos          #+#    #+#             */
-/*   Updated: 2016/02/28 10:09:19 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/05 01:14:11 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	matrix_sqrt_free(char **map, size_t n)
 {
-	while (n--)
-		free(*(map++));
-	map = NULL;
+	while (n)
+		free(map[--n]);
+	free(map);
 }

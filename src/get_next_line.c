@@ -6,7 +6,7 @@
 /*   By: glodenos <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/28 11:22:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/09/02 09:50:03 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/05 02:08:38 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ static int		get_read(int const fd, char **over)
 {
 	int			i;
 	char		*tmp;
+	char		*swp;
 
 	i = 0;
 	if (!(tmp = ft_memalloc(BUFF_SIZE + 1)))
@@ -28,7 +29,11 @@ static int		get_read(int const fd, char **over)
 	if (!over[fd])
 		over[fd] = ft_strdup(tmp);
 	else
-		over[fd] = ft_strjoin(over[fd], tmp);
+	{
+		swp = ft_strdup(over[fd]);
+		over[fd] = ft_strjoin(swp, tmp);
+		free(swp);
+	}
 	free(tmp);
 	return (i);
 }
@@ -39,8 +44,6 @@ static int		get_line_over(int const fd, char **over, char **line, int k)
 	char		*tmp;
 
 	i = 0;
-	if (!*line)
-		*line = ft_strnew(0);
 	while (over[fd][i] != '\n' && over[fd][i])
 		i++;
 	if (i && i == (int)ft_strlen(over[fd]) && k > 0)
