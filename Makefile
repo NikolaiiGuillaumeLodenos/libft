@@ -6,9 +6,11 @@
 #    By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#              #
-#    Updated: 2016/09/05 10:03:35 by glodenos         ###   ########.fr        #
+#    Updated: 2016/09/05 23:44:07 by glodenos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+FLAGS	=	
 
 HEAD	=	-I ./head
 
@@ -61,6 +63,7 @@ SRC		=	src/ft_atoi.c			\
 			src/ft_strjoin.c		\
 			src/ft_strlcat.c		\
 			src/ft_strlen.c			\
+			src/ft_strlen_tab.c		\
 			src/ft_strmap.c			\
 			src/ft_strmapi.c		\
 			src/ft_strncat.c		\
@@ -90,7 +93,7 @@ $(NAME):
 	@echo "|    |___|   ||    |   \|     \     |    |   "
 	@echo "|________\___||________/\_____/     |____|   "         
 	@echo "                                             "
-	@gcc -c $(SRC) $(HEAD)
+	@gcc -c $(SRC) $(HEAD) $(FLAGS)
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 
