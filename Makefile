@@ -6,11 +6,11 @@
 #    By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#              #
-#    Updated: 2016/09/05 23:44:07 by glodenos         ###   ########.fr        #
+#    Updated: 2016/09/18 00:43:32 by glodenos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-FLAGS	=	
+FLAGS	=	-Wall -Werror -Wextra -O3 -ansi -pedantic #-Weverything 
 
 HEAD	=	-I ./head
 
