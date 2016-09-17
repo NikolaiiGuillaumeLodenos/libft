@@ -6,7 +6,7 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/09/18 01:12:17 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/18 01:17:37 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,8 @@ int                 ft_strequ(char const *s1, char const *s2);
 void                ft_striter(char *s, void (*f)(char *));
 void                ft_striteri(char *s, void (*f)(unsigned int, char *));
 char                *ft_strjoin(char const *s1, char const *s2);
-sizet               ft_strlcat(char *dest, char const *src, size_t count);
-sizet               ft_strlen(char const *s);
+size_t              ft_strlcat(char *dest, char const *src, size_t count);
+size_t              ft_strlen(char const *s);
 int                 ft_strlen_tab(char **tab);
 char                *ft_strmap(char const *s, char (*f)(char));
 char                *ft_strmapi(char const *s, char (*f)(unsigned int, char));
