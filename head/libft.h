@@ -6,7 +6,7 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/09/18 01:17:37 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/25 17:40:51 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,7 @@ size_t              ft_strlen(char const *s);
 int                 ft_strlen_tab(char **tab);
 char                *ft_strmap(char const *s, char (*f)(char));
 char                *ft_strmapi(char const *s, char (*f)(unsigned int, char));
+size_t              ft_strnbr_idtchar(char *str, char c);
 char                *ft_strncat(char *dest, char const *src, size_t n);
 int                 ft_strnequ(char const *s1, char const *s2, size_t n);
 char                *ft_strnew(size_t size);

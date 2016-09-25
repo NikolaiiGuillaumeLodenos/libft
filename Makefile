@@ -6,7 +6,7 @@
 #    By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#              #
-#    Updated: 2016/09/18 00:43:32 by glodenos         ###   ########.fr        #
+#    Updated: 2016/09/25 17:39:00 by glodenos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,7 @@ SRC		=	src/ft_atoi.c			\
 			src/ft_strlen_tab.c		\
 			src/ft_strmap.c			\
 			src/ft_strmapi.c		\
+			src/ft_strnbr_idtchar.c	\
 			src/ft_strncat.c		\
 			src/ft_strnequ.c		\
 			src/ft_strnew.c			\
