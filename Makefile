@@ -6,7 +6,7 @@
 #    By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#              #
-#    Updated: 2016/09/25 20:15:42 by glodenos         ###   ########.fr        #
+#    Updated: 2016/09/26 13:05:14 by glodenos         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,9 @@ NAME	=	libft.a
 
 OBJ		=	$(SRC:src/%.c=%.o)
 
-SRC		=	src/ft_atoi.c			\
+SRC		=							\
+			src/free_tab.c			\
+			src/ft_atoi.c			\
 			src/ft_bzero.c			\
 			src/ft_itoa.c			\
 			src/ft_isalnum.c		\

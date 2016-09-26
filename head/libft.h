@@ -6,7 +6,7 @@
 /*   By: glodenos <glodenos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2100/01/01 00:00:00 by glodenos          #+#    #+#             */
-/*   Updated: 2016/09/25 21:08:10 by glodenos         ###   ########.fr       */
+/*   Updated: 2016/09/26 13:52:02 by glodenos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct      s_list
     struct s_list   *next;
 }                   t_list;
 
+void                free_tab(void **tab);
 int                 ft_atoi(char const *s);
 void                ft_bzero(void *s, size_t n);
 int                 ft_isalnum(int c);
